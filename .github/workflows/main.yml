@@ -1,4 +1,4 @@
-
+name: Create Ubuntu ISO
 
 on:
   push:
@@ -41,4 +41,3 @@ jobs:
         asset_path: build.iso
         asset_name: Ubuntu Mr.iso
         asset_content_type: application/octet-stream
-        
