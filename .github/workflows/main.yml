@@ -15,7 +15,7 @@ jobs:
       run: sudo apt-get install -y debootstrap squashfs-tools xorriso
     - name: Create ISO
       run:
-        | sudo debootstrap --arch=amd64 bionic ./build
+        sudo debootstrap --arch=amd64 bionic ./build
         && sudo chroot ./build apt-get install -y kde-plasma-desktop
         && sudo mksquashfs ./build ./build.squashfs -e boot
         && xorriso -as mkisofs \
